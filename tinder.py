@@ -7,9 +7,16 @@ from selenium.webdriver.chrome.options import Options
 import time
 
 
+"""
+swipes through tinder for you
+you must be logged into tinder on chrome for this to work
+"""
+
+
 class TinderBot:
     def __init__(self):
         options = webdriver.ChromeOptions()
+        # use the default chrome profile
         options.add_argument(
             r"--user-data-dir=C:\Users\jackf\AppData\Local\Google\Chrome\User Data")
         mobile_emulation = {"deviceMetrics": {
