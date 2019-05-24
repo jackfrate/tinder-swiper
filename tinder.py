@@ -12,11 +12,15 @@ class TinderBot:
         options = webdriver.ChromeOptions()
         options.add_argument(
             r"--user-data-dir=C:\Users\jackf\AppData\Local\Google\Chrome\User Data")
+        mobile_emulation = {"deviceMetrics": {
+            "width": 360, "height": 640, "pixelRatio": 3.0}}
+        options.add_experimental_option("mobileEmulation", mobile_emulation)
         self.driver = webdriver.Chrome(
             chrome_options=options)
         # executable_path='chromedriver.exe'
 
     def respect_women(self):
+
         self.driver.get("https://tinder.com")
         time.sleep(5)
         # just loop till the card is gone
