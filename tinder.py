@@ -29,7 +29,7 @@ class TinderBot:
     def respect_women(self):
 
         self.driver.get("https://tinder.com")
-        time.sleep(5)
+        time.sleep(3)
         # just loop till the card is gone
         try:
             swipes = 0
